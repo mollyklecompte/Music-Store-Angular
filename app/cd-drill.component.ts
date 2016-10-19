@@ -28,14 +28,15 @@ export class CdDrillComponent {
     this.clickSender.emit(cdToShow);
   }
 
-
-  uniqueArtistList: string[] = [];
-  getArtist() {
-    for(var i=0; i<childCdList.length; i++) {
-      if (!uniqueArtistList.contains(cd.artist)) {
-        uniqueArtistList.push(cd.artist);
-      }
-    }
-  }
+  //
+  // uniqueArtistList: string[] = [];
+  //
+  // getArtist() {
+  //   for(var i=0; i<childCdList.length; i++) {
+  //     if (!uniqueArtistList.contains(cd.artist)) {
+  //       uniqueArtistList.push(cd.artist);
+  //     }
+  //   }
+  // }
 
 }

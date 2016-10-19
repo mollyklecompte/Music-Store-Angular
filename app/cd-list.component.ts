@@ -54,13 +54,6 @@ export class CdListComponent {
     this.selectedCd = null;
   }
 
-  uniqueArtistList: string[] = [];
-  removeArtistDupes() {
-    for(var cd of masterCdList) {
-      if (!uniqueArtistList.contains(cd.artist)) {
-        uniqueArtistList.push(cd.artist);
-      }
-    }
-  }
+  
 
 }
