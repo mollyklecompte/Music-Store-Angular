@@ -5,16 +5,21 @@ import { Cd } from './cd.model';
   selector: 'my-cd-list',
   template: `
   <div class="container">
-    <h1>S&amp;M's Music Dungeon</h1>
-    <p *ngFor="let cd of masterCdList">
-      {{ cd.title }}
-      </p>
+    <h3>CD Catalogue</h3>
+    <cd-drill
+      [childCdList]="masterCdList"
+      (clickSender)="showDetails($event)"
+    ></cd-drill>
+    <cd-detail
+      [childSelectedCd]="selectedCd"
+      (cartStatusChangedSender)="doneWithDetails()"
+    ></cd-detail>
   </div>
   `
 })
 
 export class CdListComponent {
-  public masterCdList: Cd[] = [
+    public masterCdList: Cd[] = [
     new Cd("The Matrix: Music from the Motion Picture", "Various Artists", "Soundtrack", 1999, 8.00),
     new Cd("Hellbilly Deluxe", "Rob Zombie", "Metal", 1998, 10.00),
     new Cd("The Sinister Urge", "Rob Zombie", "Metal", 2001, 10.00),
@@ -39,4 +44,23 @@ export class CdListComponent {
     new Cd("Ray of Light", "Madonna", "Pop", 1998, 8.00),
     new Cd("Music", "Madonna", "Pop", 2000, 8.00)
   ];
+
+  selectedCd: Cd = null;
+  showDetails(clickedCd: Cd) {
+    this.selectedCd = clickedCd;
+  }
+
+  doneWithDetails() {
+    this.selectedCd = null;
+  }
+
+  uniqueArtistList: string[] = [];
+  removeArtistDupes() {
+    for(var cd of masterCdList) {
+      if (!uniqueArtistList.contains(cd.artist)) {
+        uniqueArtistList.push(cd.artist);
+      }
+    }
+  }
+
 }

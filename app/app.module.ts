@@ -5,7 +5,9 @@ import { AppComponent }   from './app.component';
 import { CdListComponent } from './cd-list.component';
 import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
-
+import { CartComponent } from './cart.component';
+import { CdDrillComponent } from './cd-drill.component';
+import { CdDetailComponent } from './cd-detail.component';
 
 
 @NgModule({
@@ -26,12 +28,19 @@ import { DashboardComponent } from './dashboard.component';
       redirectTo: '/dashboard',
       pathMatch: 'full'
     },
+    {
+      path:'my-cart',
+      component: CartComponent
+    },
   ])
 ],
   declarations: [
     AppComponent,
     CdListComponent,
     DashboardComponent,
+    CartComponent,
+    CdDrillComponent,
+    CdDetailComponent,
    ],
   bootstrap:    [ AppComponent ]
 })
