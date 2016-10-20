@@ -8,6 +8,8 @@ import { DashboardComponent } from './dashboard.component';
 import { CartComponent } from './cart.component';
 import { CdDrillComponent } from './cd-drill.component';
 import { CdDetailComponent } from './cd-detail.component';
+import { ArtistPipe } from './artist.pipe';
+import { GenrePipe } from './genre.pipe';
 
 
 @NgModule({
@@ -41,6 +43,8 @@ import { CdDetailComponent } from './cd-detail.component';
     CartComponent,
     CdDrillComponent,
     CdDetailComponent,
+    ArtistPipe,
+    GenrePipe,
    ],
   bootstrap:    [ AppComponent ]
 })

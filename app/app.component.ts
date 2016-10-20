@@ -14,10 +14,9 @@ import { Component } from '@angular/core';
           </div>
         </div>
       </nav>
-    
+
+      
     <router-outlet></router-outlet>
-
-
   `
 })
 
