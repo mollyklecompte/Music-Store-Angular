@@ -33,7 +33,7 @@ var sourcemaps = require('gulp-sourcemaps');
 ////////////////////// TYPESCRIPT //////////////////////
 // clean task
 gulp.task('tsClean', function(){
-  return del(['app/*.js', 'app/*.js.map']);
+  return del(['app/js']);
 });
 
 // clean and then compile once. To be called from server and global build.

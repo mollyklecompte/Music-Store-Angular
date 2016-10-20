@@ -1,9 +1,7 @@
 node_modules/
 npm-debug.log
 bower_components/
-app/*.js
-app/*.js.map
+app/js
 .DS_Store
 build/
 typings/
-Resources

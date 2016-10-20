@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Cd } from './cd.model';
+import { CdService } from './cd.service';
+import { OnInit } from '@angular/core';
 
 @Component({
   selector: 'my-cd-list',
@@ -16,10 +18,31 @@ import { Cd } from './cd.model';
     ></cd-detail>
 
   </div>
-  `
+
+
+  `,
+  providers: [CdService]
 })
 
-export class CdListComponent {
+export class CdListComponent implements OnInit{
+  cds: Cd[];
+
+  constructor(private cdService: CdService) {
+  }
+
+  getCds(): void {
+    this.cds = this.cdService.getCds().then(cds => this.cds = cds);
+  }
+
+  ngOnInit(): void {
+    this.getCds();
+  }
+
+
+
+
+
+
     public masterCdList: Cd[] = [
     new Cd("The Matrix: Music from the Motion Picture", "Various Artists", "Soundtrack", 1999, 8.00),
     new Cd("Hellbilly Deluxe", "Rob Zombie", "Metal", 1998, 10.00),

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+
+
 @Component({
   selector: 'my-app',
   template:`
@@ -15,11 +17,12 @@ import { Component } from '@angular/core';
         </div>
       </nav>
 
-      
+
     <router-outlet></router-outlet>
   `
 })
 
 export class AppComponent {
   title = 'S&Ms Music Dungeon';
+
 }

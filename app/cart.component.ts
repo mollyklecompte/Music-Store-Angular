@@ -15,14 +15,14 @@ import { Cd } from './cd.model';
 
 export class CartComponent {
 // @Input() childCdList: Cd[];
-
+//
 // public cartTotal: number = 0;
 // public cdsInCart: Cd[] = [];
 //
 // getCdsInCart(childCdList: Cd[]) {
 //   for(var i=0; i < childCdList.length; i++) {
-//     if (input[i].inCart === true) {
-//       this.cdsInCart.push([i]);
+//     if (childCdList[i].inCart === true) {
+//       this.cdsInCart.push(childCdList[i]);
 //     }
 //   }
 // }
