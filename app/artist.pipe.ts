@@ -65,15 +65,36 @@ export class ArtistPipe implements PipeTransform {
       }
     }
     return output;
-  } else if(desiredArtist === "Madonna") {
+  } else if(desiredArtist === "Britney Spears") {
     for(var i=0; i < input.length; i++) {
-      if(input[i].artist === "Madonna") {
+      if(input[i].artist === "Britney Spears") {
+        output.push(input[i]);
+      }
+  }
+  return output;
+} else if(desiredArtist === "Kanye West") {
+    for(var i=0; i < input.length; i++) {
+      if(input[i].artist === "Kanye West") {
         output.push(input[i]);
       }
     }
-    return output;
-    } else {
-      return input;
+  return output;
+    }else if(desiredArtist === "Madonna") {
+      for(var i=0; i < input.length; i++) {
+        if(input[i].artist === "Madonna") {
+          output.push(input[i]);
+        }
+      }
+  return output;
+}else if(desiredArtist === "The Beatles") {
+    for(var i=0; i < input.length; i++) {
+      if(input[i].artist === "The Beatles") {
+        output.push(input[i]);
+      }
+    }
+  return output;
+  } else {
+  return input;
     }
   }
 }

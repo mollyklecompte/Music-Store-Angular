@@ -13,7 +13,6 @@ import { CdService } from './cd.service';
 })
 
 export class DashboardComponent implements OnInit {
-
   cds: Cd[] = [];
 
   constructor(private cdService: CdService) { }

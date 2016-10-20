@@ -1,6 +1,8 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Cd } from './cd.model';
 import { CdListComponent } from './cd-list.component';
+import { CdService } from './cd.service';
+import { OnInit } from '@angular/core';
 
 @Component({
   selector: 'cd-drill',
@@ -27,17 +29,28 @@ import { CdListComponent } from './cd-list.component';
         <option value="Various Artists">Various Artists</option>
         <option value="Screamin' Jay Hawkins">Screamin' Jay Hawkins</option>
         <option value="Madonna">Madonna</option>
+        <option value="Britney Spears">Britney Spears</option>
+        <option value="Kanye West">Kanye West</option>
+        <option value="The Beatles">The Beatles</option>
       </select>
     <!-- In the childList (eg masterCdList from app.component ;), we're implementing a pipe here, to show only the object info that includes the artist that is selected from the dropdown above. How does that happen? The pipe is included in the forloop within the div tag. The pipe's name is "artist", and the parameters include the "selected artist", which in the case of this loop, that the "selectedArtist" property that was given to the CdDrillComponent class when the artist name was selected from the list.-->
-    <div *ngFor="let currentCd of childCdList | artist:selectedArtist | genre:selectedGenre" (click)="detailButtonHasBeenClicked(currentCd)">
-      {{ currentCd.title }}, {{ currentCd.artist }}
+    <div *ngFor="let cd of cds | artist:selectedArtist | genre:selectedGenre" (click)="detailButtonHasBeenClicked(cd)">
+      {{ cd.title }}, {{ cd.artist }}
     </div>
   </div>
   `
 })
 
-export class CdDrillComponent {
-  @Input() childCdList: Cd[];
+export class CdDrillComponent implements OnInit {
+  cds: Cd[];
+  constructor(private cdService: CdService) {
+  }
+
+  ngOnInit(): void {
+    this.cdService.getCds()
+      .then(cds => this.cds = cds);
+  }
+
   @Output() clickSender = new EventEmitter();
   // These are properties of CdDrillComponent, but the information that's being passed in through the onChange functions are going to assign strings from the menu options to the CdDrillComponent properties. The menu selection strings then become properties of the CdDrillComponent class.
   public selectedArtist: string = "All Artists";
