@@ -12,6 +12,7 @@ import { ArtistPipe } from './artist.pipe';
 import { GenrePipe } from './genre.pipe';
 import { CartPipe } from './cart.pipe';
 import { CdService } from './cd.service';
+import { InCartPipe } from './in-cart.pipe';
 
 @NgModule({
   imports: [
@@ -47,8 +48,9 @@ import { CdService } from './cd.service';
     ArtistPipe,
     GenrePipe,
     CartPipe,
+    InCartPipe,
    ],
-  providers: [CdService], 
+  providers: [CdService],
   bootstrap:    [ AppComponent ]
 })
 

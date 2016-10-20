@@ -16,6 +16,7 @@ import { OnInit } from '@angular/core';
         <option value="Pop">Pop</option>
         <option value="Electronica">Electronica</option>
         <option value="Shock Rock">Shock Rock</option>
+        <option value="Rap">Rap</option>
       </select>
       <!-- When an artist is selected from this menu, the function onArtistChange is triggered, and the target e.g. artist name is passed in as an argument below. -->
       <select (change)="onArtistChange($event.target.value)" class="form-control filter">

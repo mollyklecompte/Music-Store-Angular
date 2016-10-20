@@ -8,9 +8,8 @@ import { CartPipe } from './cart.pipe';
   template: `
     <h3>My Cart</h3>
     <ul>
-    <li *ngFor="let cd of cds">{{ cd.title }}</li>
+      <li *ngFor="let cd of cds | inCart:cds">{{ cd.title }}</li>
     </ul>
-
     <p>Total: \${{ cds | cart }} </p>
   `
 })
@@ -24,7 +23,4 @@ export class CartComponent implements OnInit {
     this.cdService.getCds()
       .then(cds => this.cds = cds);
   }
-
-  gotoDetail(cd: Cd): void { /* not implemented yet */}
-
 }
