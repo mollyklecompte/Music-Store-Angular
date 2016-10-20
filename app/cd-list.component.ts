@@ -14,6 +14,7 @@ import { Cd } from './cd.model';
       [childSelectedCd]="selectedCd"
       (cartStatusChangedSender)="doneWithDetails()"
     ></cd-detail>
+
   </div>
   `
 })
@@ -54,6 +55,6 @@ export class CdListComponent {
     this.selectedCd = null;
   }
 
-  
+
 
 }

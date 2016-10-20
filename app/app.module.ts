@@ -10,7 +10,7 @@ import { CdDrillComponent } from './cd-drill.component';
 import { CdDetailComponent } from './cd-detail.component';
 import { ArtistPipe } from './artist.pipe';
 import { GenrePipe } from './genre.pipe';
-
+import { CartPipe } from './cart.pipe';
 
 @NgModule({
   imports: [
@@ -45,6 +45,7 @@ import { GenrePipe } from './genre.pipe';
     CdDetailComponent,
     ArtistPipe,
     GenrePipe,
+    CartPipe,
    ],
   bootstrap:    [ AppComponent ]
 })
