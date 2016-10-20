@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Cd } from './cd.model';
 import { CdService } from './cd.service';
 

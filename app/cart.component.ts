@@ -1,36 +1,30 @@
 import { Component, OnInit } from '@angular/core';
 import { Cd } from './cd.model';
-
+import { CdService } from './cd.service';
+import { CartPipe } from './cart.pipe';
 
 @Component({
   selector: 'my-cart',
   template: `
     <h3>My Cart</h3>
     <ul>
-    <li *ngFor="let cd of childCdList"></li>
+    <li *ngFor="let cd of cds">{{ cd.title }}</li>
     </ul>
-    <h2>Total: \${{ childCdList | cart }}</h2>
+
+    <p>Total: \${{ cds | cart }} </p>
   `
 })
 
-export class CartComponent {
-// @Input() childCdList: Cd[];
-//
-// public cartTotal: number = 0;
-// public cdsInCart: Cd[] = [];
-//
-// getCdsInCart(childCdList: Cd[]) {
-//   for(var i=0; i < childCdList.length; i++) {
-//     if (childCdList[i].inCart === true) {
-//       this.cdsInCart.push(childCdList[i]);
-//     }
-//   }
-// }
-//
-// calculateTotal(cdsInCart: Cd[]) {
-//   for(var i=0; i < cdsInCart.length; i++) {
-//     this.cartTotal += [i].price;
-//   }
-// }
+export class CartComponent implements OnInit {
+  cds: Cd[] = [];
+
+  constructor(private cdService: CdService) { }
+
+  ngOnInit(): void {
+    this.cdService.getCds()
+      .then(cds => this.cds = cds);
+  }
+
+  gotoDetail(cd: Cd): void { /* not implemented yet */}
 
 }

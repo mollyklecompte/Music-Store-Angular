@@ -11,6 +11,7 @@ import { CdDetailComponent } from './cd-detail.component';
 import { ArtistPipe } from './artist.pipe';
 import { GenrePipe } from './genre.pipe';
 import { CartPipe } from './cart.pipe';
+import { CdService } from './cd.service';
 
 @NgModule({
   imports: [
@@ -47,6 +48,7 @@ import { CartPipe } from './cart.pipe';
     GenrePipe,
     CartPipe,
    ],
+  providers: [CdService], 
   bootstrap:    [ AppComponent ]
 })
 
