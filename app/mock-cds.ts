@@ -1,7 +1,30 @@
-import { Cd } from './cd.model';
+import {inCart: false,  Cd } from './cd.model';
 
 export const CDS: Cd[] = [
   {inCart: false, title: "Toxic", artist: "Britney Spears", genre: "Pop", year: 2003, price: 10.00},
   {inCart: false, title: "The White Album", artist: "The Beatles", genre: "Pop", year: 1967, price: 10.00},
-  {inCart: false, title: "Life of Pablo", artist: "Kanye West", genre: "Rap", year: 2016, price: 14.00}
+  {inCart: false, title: "Life of Pablo", artist: "Kanye West", genre: "Rap", year: 2016, price: 14.00},
+  {inCart: false, title: "The Matrix: Music from the Motion Picture", artist: "Various Artists", genre: "Soundtrack", year: 1999, price: 8.00},
+  {inCart: false, title: "Hellbilly Deluxe", artist: "Rob Zombie", genre: "Metal", year: 1999, price: 10.00},
+  {inCart: false, title: "The Sinister Urge", artist: "Rob Zombie", genre: "Metal", year: 2001, price: 10.00},
+  {inCart: false, title: "The Electric Warlock Acid Witch Satanic Orgy Celebration Dispenser", artist: "Rob Zombie", genre: "Metal", year: 2016, price: 14.00},
+  {inCart: false, title: "Antichrist Superstar", artist: "Marilyn Manson", genre: "Metal", year: 1996, price: 12.00},
+  {inCart: false, title: "SAY10", artist: "Marilyn Manson", genre: "Metal", year: 2017, price: 20.00},
+  {inCart: false, title: "Eat Me, Drink Me", artist: "Marilyn Manson", genre: "Metal", year: 2007, price: 20.00},
+  {inCart: false, title: "Everything's Under Control", artist: "Actual Sounds + Voices", genre: "Electronica", year: 1998, price: 8.00},
+  {inCart: false, title: "Experience", artist: "The Prodigy", genre: "Electronica", year: 1992, price: 8.00},
+  {inCart: false, title: "Invaders Must Die", artist: "The Prodigy", genre: "Electronica", year: 2004, price: 10.00},
+  {inCart: false, title: "Herzeleid", artist: "Rammstein", genre: "Metal", year: 1995, price: 10.00},
+  {inCart: false, title: "Rosenrot", artist: "Rammstein", genre: "Metal", year: 2005, price: 10.00},
+  {inCart: false, title: "Good Girl Gone Bad", artist: "Rihanna", genre: "Pop", year: 2007, price: 10.00},
+  {inCart: false, title: "Rated R", artist: "Rihanna", genre: "Pop", year: 2009, price: 10.00},
+  {inCart: false, title: "Unapologetic", artist: "Rihanna", genre: "Pop", year: 2012, price: 10.00},
+  {inCart: false, title: "Fifty Shades of Grey: Original Motion Picture Soundtrack", artist: "Various Artists", genre: "Soundtrack", year: 2015, price: 8.00},
+  {inCart: false, title: "I Shake My Stick at You", artist: "Screamin' Jay Hawkins", genre: "Shock Rock", year: 1991, price: 10.00},
+  {inCart: false, title: "I Put a Spell on You", artist: "Screamin' Jay Hawkins", genre: "Shock Rock", year: 1977, price: 10.00},
+  {inCart: false, title: "Rated X", artist: "Screamin' Jay Hawkins", genre: "Shock Rock", year: 1970, price: 10.00},
+  {inCart: false, title: "Madonna", artist: "Madonna", genre: "Pop", year: 1983, price: 8.00},
+  {inCart: false, title: "Like a Virgin", artist: "Madonna", genre: "Pop", year: 1984, price: 9.00},
+  {inCart: false, title: "Ray of Light", artist: "Madonna", genre: "Pop", year: 1998, price: 8.00},
+  {inCart: false, title: "Music", artist: "Madonna", genre: "Pop", year: 2000, price: 8.00}
 ];

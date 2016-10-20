@@ -35,6 +35,7 @@ import { OnInit } from '@angular/core';
         <option value="The Beatles">The Beatles</option>
       </select>
     <!-- In the childList (eg masterCdList from app.component ;), we're implementing a pipe here, to show only the object info that includes the artist that is selected from the dropdown above. How does that happen? The pipe is included in the forloop within the div tag. The pipe's name is "artist", and the parameters include the "selected artist", which in the case of this loop, that the "selectedArtist" property that was given to the CdDrillComponent class when the artist name was selected from the list.-->
+
     <div *ngFor="let cd of cds | artist:selectedArtist | genre:selectedGenre" (click)="detailButtonHasBeenClicked(cd)">
       {{ cd.title }}, {{ cd.artist }}
     </div>

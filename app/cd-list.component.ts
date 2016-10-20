@@ -7,14 +7,13 @@ import { OnInit } from '@angular/core';
   selector: 'my-cd-list',
   template: `
   <div class="container">
-    <h3>CD Catalogue</h3>
-    <cd-drill
-      (clickSender)="showDetails($event)"
-    ></cd-drill>
     <cd-detail
       [childSelectedCd]="selectedCd"
       (cartStatusChangedSender)="doneWithDetails()"
     ></cd-detail>
+    <cd-drill
+      (clickSender)="showDetails($event)"
+    ></cd-drill>    
   </div>
   `,
   providers: [CdService]

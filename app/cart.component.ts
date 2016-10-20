@@ -6,11 +6,11 @@ import { CartPipe } from './cart.pipe';
 @Component({
   selector: 'my-cart',
   template: `
-    <h3>My Cart</h3>
-    <ul>
-      <li *ngFor="let cd of cds | inCart:cds">{{ cd.title }}</li>
-    </ul>
-    <p>Total: \${{ cds | cart }} </p>
+      <h3>My Cart</h3>
+      <ul>
+        <li *ngFor="let cd of cds | inCart:cds">{{ cd.title }}</li>
+      </ul>
+      <p>Total: \${{ cds | cart }} </p>
   `
 })
 
