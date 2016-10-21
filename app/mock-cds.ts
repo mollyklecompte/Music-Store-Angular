@@ -1,4 +1,4 @@
-import {inCart: false,  Cd } from './cd.model';
+import { Cd } from './cd.model';
 
 export const CDS: Cd[] = [
   {inCart: false, title: "Toxic", artist: "Britney Spears", genre: "Pop", year: 2003, price: 10.00},
