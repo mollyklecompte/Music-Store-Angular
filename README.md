@@ -2,7 +2,7 @@
 
 #### _10-20-16_
 
-#### By _Molly LeCompte**_
+#### By _Molly LeCompte_
 
 ## Description
 
