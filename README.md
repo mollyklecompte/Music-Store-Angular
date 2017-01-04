@@ -2,7 +2,7 @@
 
 #### _10-20-16_
 
-#### By _Molly LeCompte_
+#### By _Molly LeCompte & Sara Jensen_
 
 ## Description
 
@@ -35,4 +35,4 @@ Sass_
 
 *This webpage is licensed under the MIT license.*
 
-Copyright (c) 2016 **_Molly LeCompte_**
+Copyright (c) 2016 **_Molly LeCompte & Sara Jensen_**
